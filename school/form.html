@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>school</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap');
+    body {
+        font-family: 'Noto Sans', sans-serif;
+        background-color: #d1d3d5;
+        margin: 0;
+    }
+    
+    .top-container {
+        margin: 0%;
+        height: auto;
+        width: 100%;
+        background-color: #3E7CB1;
+        padding: 0.1px;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .imgblock {
+        width: auto;
+        height: auto;
+    }
+    
+    .emblem img {
+        width: 120px;
+        height: 105px;
+        float: left;
+        padding-left: 10px;
+        padding-top: 14px;
+        padding-bottom: 6px;
+    }
+    
+    .emblem {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: auto;
+        padding-bottom: 8px;
+        background-color: #3E7CB1;
+        justify-content: center;
+        padding-left: 20px;
+        position: static;
+    }
+    
+    .title {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        color: white;
+        width: 100%;
+        padding-left: 20px;
+    }
+    
+    .title1 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    .title2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    h3 {
+        padding-left: 1%;
+        font-weight: bold;
+    }
+    
+    .form {
+        padding-left: 3%;
+    }
+    
+    .basic {
+        padding-left: 3%;
+        align-items: left;
+        justify-content: flex-start;
+    }
+    
+    .academic {
+        padding-left: 3%;
+        align-items: left;
+        justify-content: flex-start;
+    }
+    
+    .input-container {
+        position: relative;
+        display: flex;
+        width: 90%;
+        padding-left: 1%;
+        gap: 30px;
+        background-color: #d1d3d5;
+    }
+    
+    .input-container1 {
+        position: relative;
+        display: flex;
+        width: 90%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container2 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container3 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container4 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container5 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container6 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container7 {
+        position: relative;
+        display: flex;
+        width: 99%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container8 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-container9 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding-left: 1%;
+        gap: 30px;
+    }
+    
+    .input-box {
+        width: 34%;
+        padding: 7px;
+        background-color: #d1d3d5;
+        border: 2px solid #000000;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    
+    .input-label {
+        position: absolute;
+        top: 50%;
+        left: 75px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #333;
+        background-color: #d1d3d5;
+        padding: 0 2px;
+        border-radius: 10px;
+        transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    }
+    
+    .input-box:focus+.input-label,
+    .input-box:valid+.input-label {
+        top: -7px;
+        font-size: 18px;
+        color: black;
+        background-color: #d1d3d5;
+        padding: 0 4px;
+        border-radius: 4px;
+        left: 32px;
+    }
+    
+    nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    
+    li {
+        display: inline;
+        margin: 0 20px;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .containerbutton {
+        height: 200px;
+        position: relative;
+    }
+    
+    .hr {
+        width: 4%;
+        border-color: black;
+        border-width: 2%;
+    }
+    
+    button {
+        position: absolute;
+        left: 40%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        justify-content: center;
+        background-color: #3E7CB1;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        width: 15%;
+    }
+    
+    p {
+        text-align: left;
+        font-size: 20px;
+        max-width: 600px;
+        position: relative;
+    }
+    
+    .line-8 {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 1px 0 0 0;
+        width: 1233px;
+        height: 0px;
+        position: absolute;
+        left: 230px;
+        top: 210px;
+    }
+    
+    .line-82 {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 1px 0 0 0;
+        width: 1233px;
+        height: 0px;
+        position: absolute;
+        left: 230px;
+        top: 859px;
+    }
+    
+    .line-83 {
+        border-style: solid;
+        border-color: #000000;
+        border-width: 1px 0 0 0;
+        width: 1250px;
+        height: 0px;
+        position: absolute;
+        left: 190px;
+        top: 1120px;
+    }
+    
+    .containerbutton {
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button {
+        padding: 10px 60px;
+        background: #3E7CB1;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        border-radius: 15px;
+        color: #fff;
+    }
+    
+    .popup {
+        width: 400px;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.5);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        transition: transform 0.4s, top 0.4s;
+        visibility: hidden;
+    }
+    
+    .popup img {
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 90%;
+        border-color: #000000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .popup h2 {
+        font-size: 38px;
+        font-weight: 500;
+    }
+    
+    .popup button1 {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10 px 0;
+        background: #3E7CB1;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    .open-Popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+</style>
+
+<body>
+    <div class="top-container" style="background-color:paleturquoise;">
+        <div class="emblem" style="background-color: paleturquoise">
+            <div class="imgblock">
+                <img src="logobdu.png" alt="">
+            </div>
+            <div class="title" >
+                <label class="title1">School name</label>
+                <label class="title2">Located place</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="new account">
+        <h3 align="left">Registration Form
+        </h3>
+    </div>
+
+    <div class="basic">
+        <p align="left">Basic Information </p>
+        <div class="line-8"></div>
+        <br />
+        <br/>
+    </div>
+    <form>
+
+        <div class="input-container">
+            <input class="input-box" type="text" id="name" name="name" required>
+            <label class="input-label" for="full_name">Full Name with initial at last </label>
+        </div>
+        <br />
+        <br/>
+        <div class="input-container1">
+            <input class="input-box" type="date" id="Date of Birth" name="date of birth" required>
+            <label class="input-label" for="date of birth">Date of Birth</label>
+            <div class="input-container1">
+
+                <select class="input-box" id="gender" name="gender" required>
+                        <option value=""> </option>
+                        <option value="">male</option>
+                        <option value="">female</option>
+                        <option value="">other</option>
+                        
+                    </select>
+                <label class="input-label" for="gender">Gender</label>
+
+            </div>
+        </div>
+        </div>
+        <br />
+        <br/>
+        <div class="input-container2">
+            <input class="input-box" type="text" id="adress" name="adress" required>
+            <label class="input-label" for="address">Address</label>
+            <div class="input-container2">
+                <input class="input-box" type="text" id="city" name="city" required>
+                <label class="input-label" for="city">City </label>
+                <div class="input-container2">
+                    <input class="input-box" type="text" id="code" name="code" required>
+                    <label class="input-label" for="code">Pin Code </label>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br/>
+        <div class="input-container3">
+            <input class="input-box" type="" id="fathername" name="fathername" required>
+            <label class="input-label" for="fathername">Father Name</label>
+            <div class="input-container3">
+                <input class="input-box" type="text" id="fatheroccupation" name="fatheroccupation" required>
+                <label class="input-label" for="fatheroccupation">Father Occupation</label>
+
+            </div>
+        </div>
+        </div>
+        <br />
+        <br/>
+        <div class="input-container4">
+            <input class="input-box" type="text" id="gname" name="gname" required>
+            <label class="input-label" for="gname">Guardian Name</label>
+
+            <div class="input-container4">
+                <input class="input-box" type="text" id="bloodgroup" name="bloodgroup" required>
+                <label class="input-label" for="bloodgroup">Blood Group</label>
+                <div class="input-container4">
+                    <select class="input-box" id="Diffrently abled" name="Diffrently abled" required>
+                        <option value="yes"> </option>
+                        <option value="yes"> Yes</option>
+                        <option value="no"> No</option>
+                    </select>
+                    <label class="input-label" for="Diffrently abled">Diffrently abled</label>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="input-container5">
+            <input class="input-box" type="text" id="mobileno" name="mobileno" required>
+            <label class="input-label" for="mobileno">Mobile Number</label>
+            <div class="input-container5">
+                <input class="input-box" type="text" id="pmobileno" name="pmobileno" required>
+                <label class="input-label" for="pmobileno"> Parent Mobile Number </label>
+                <div class="input-container5">
+                    <input class="input-box" type="text" id="emailid" name="emailid" required>
+                    <label class="input-label" for="emailid">E-Mail Id</label>
+
+                </div>
+            </div>
+        </div>
+        <br/></br>
+        <div class="input-container8">
+            <input class="input-box" type="text" id="religion" name="religiom" required>
+            <label class="input-label" for="religion">Religion</label>
+
+            <div class="input-container8">
+                <input class="input-box" type="text" id="community" name="community" required>
+                <label class="input-label" for="community">Community</label>
+                <div class="input-container8">
+                    <input class="input-box" type="text" id="aadhar" name="aadhar" required>
+                    <label class="input-label" for="aadharno">Aadhar Number</label>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form>
+        <br/>
+        <div class="academic">
+            <p align="left">Academic details</p>
+            <div class="line-82"></div>
+            <br/>
+            <br/>
+        </div>
+        <div class="input-container6">
+            <input class="input-box" type="text" id="regno" name="regno" required>
+            <label class="input-label" for="regno">Register Number</label>
+            <div class="input-container6">
+                <!-- <input class="input-box" type="number" id="Program" name="program" required> -->
+                <select class="input-box" id="Program" name="program" required>
+                    <option value="volvo"> </option>
+                    <option value="volvo">M.Tech</option>
+                    <option value="saab">MCA</option>
+                    <option value="fiat">M.Sc(CS)</option>
+                    <option value="audi">M.Sc(AI)</option>
+                    <option value="audi">M.Sc(DS)</option>
+                </select>
+                <label class="input-label" for="program">Programme</label>
+                <div class="input-container6">
+                    <input class="input-box" type="number" id="year" name="year" min="2" max="6" required>
+                    <label class="input-label" for="year">Year</label>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br/>
+        <div class="input-container7">
+            <!--<input class="input-box" type="number" id="batch" name="batch" required> -->
+            <select class="input-box" id="batch" name="batch" required>
+                <option value="volvo"> </option>
+                <option value="volvo">2020</option>
+                <option value="saab">2021</option>
+                <option value="fiat">2022</option>
+                <option value="audi">2023</option>
+                <option value="audi">2024</option>
+            </select>
+            <label class="input-label" for="batch">Batch</label>
+            <div class="input-container7">
+                <select class="input-box" id="sem" name="sem" required>
+                    <option value=""> </option>
+                    <option value="">odd</option>
+                    <option value="">even</option>
+                </select>
+                <label class="input-label" for="sem">Semester</label>
+                <div class="input-container7">
+                    <select class="input-box" id="acc" name="acc" required>
+                        <option value=""> </option>
+                        <option value="">Day Scholar</option>
+                        <option value="">Hosteller</option>
+                    </select>
+                    <label class="input-label" for="sem">Accomodation</label>
+                </div>
+            </div>
+        </div>
+        <br/>
+    </form>
+    <form>
+        <br/>
+        <div class="academic">
+            <p align="left">Bank details</p>
+            <div class="line-83"></div>
+            <br/>
+            <br/>
+        </div>
+        <div class="input-container9">
+            <input class="input-box" type="text" id="bank name" name="bank name" required>
+            <label class="input-label" for="religion">bank Name</label>
+            <div class="input-container9">
+                <input class="input-box" type="text" id="branch" name="branch" required>
+                <label class="input-label" for="branch">Bank Branch</label>
+
+                <div class="input-container9">
+                    <input class="input-box" type="text" id="account" name="accountnumber" required>
+                    <label class="input-label" for="account">Account Number</label>
+                    <div class="input-container9">
+                        <input class="input-box" type="text" id="code" name="IFSC code" required>
+                        <label class="input-label" for="code">IFSC CODE</label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="containerbutton">
+            <button type="submit" class="button" onclick="open-Popup()">Submit </button>
+        </div>
+        <div class="popup" id="popup">
+            <img src="tick1.png">
+            <h2>Thank You !</h2>
+            <p>your details has been successfully submitted</p>
+            <button type="button1" class="button" onclick="close-Popup()">OK </button>
+        </div>
+
+        <script>
+            let popup = document.getElementById("popup");
+
+            function openPopup() {
+                popup.classList.add("open-Popup");
+            }
+
+            function closePopup() {
+                popup.classList.remove("close-Popup");
+            }
+        </script>
+</body>
+
+</html>
